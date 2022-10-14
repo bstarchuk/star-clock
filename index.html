@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STARCLOCK</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="wrapper">
+    <header class="header no-select">
+        <div class="container">
+            <div class="inner">
+                <div class="menu"></div>
+                <div class="info">
+                    <img class="logo" src="img/logo.svg" alt="StarClock" draggable="false">
+                    <span class="title">STARCLOCK</span>
+                </div>
+                <div class="localization">
+                    <img class="changeLocalizationBtn" src="img/www.svg" alt="Change Localization" draggable="false">
+                    <div class="modal" style="display: none">
+                        <label for="localization-list">Select local time:</label>
+                        <select name="localization-list" id="localization-list">
+                            <option value="-12">UTC-12</option>
+                            <option value="-11">UTC-11</option>
+                            <option value="-10">UTC-10</option>
+                            <option value="-9:30">UTC-9:30</option>
+                            <option value="-9">UTC-9</option>
+                            <option value="-8">UTC-8</option>
+                            <option value="-7">UTC-7</option>
+                            <option value="-6">UTC-6</option>
+                            <option value="-5">UTC-5</option>
+                            <option value="-4">UTC-4</option>
+                            <option value="-3:30">UTC-3:30</option>
+                            <option value="-3">UTC-3</option>
+                            <option value="-2">UTC-2</option>
+                            <option value="-1">UTC-1</option>
+                            <option value="+0">UTC+0</option>
+                            <option value="+1">UTC+1</option>
+                            <option value="+2">UTC+2</option>
+                            <option value="+3">UTC+3</option>
+                            <option value="+3:30">UTC+3:30</option>
+                            <option value="+4">UTC+4</option>
+                            <option value="+4:30">UTC+4:30</option>
+                            <option value="+5">UTC+5</option>
+                            <option value="+5:30">UTC+5:30</option>
+                            <option value="+5:45">UTC+5:45</option>
+                            <option value="+6">UTC+6</option>
+                            <option value="+6:30">UTC+6:30</option>
+                            <option value="+7">UTC+7</option>
+                            <option value="+8">UTC+8</option>
+                            <option value="+8:45">UTC+8:45</option>
+                            <option value="+9">UTC+9</option>
+                            <option value="+9:30">UTC+9:30</option>
+                            <option value="+10">UTC+10</option>
+                            <option value="+10:30">UTC+10:30</option>
+                            <option value="+11">UTC+11</option>
+                            <option value="+11:30">UTC+11:30</option>
+                            <option value="+12">UTC+12</option>
+                            <option value="+12:45">UTC+12:45</option>
+                            <option value="+13">UTC+13</option>
+                            <option value="+14">UTC+14</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="date">
+            <div class="ymd">
+                <svg width="250" height="98" viewBox="0 0 250 98" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="number year n0 s0" d="M0 85.1123L0 54.6707L5.59132 49.0794L11.1826 54.6707L11.1826 85.1123L5.59132 90.7036L0 85.1123Z" fill="#12161C"/>
+                    <path class="number year n0 s1" d="M11.8039 85.7336H42.2455L47.8368 91.3249L42.2455 96.9162H11.8039L6.21259 91.3249L11.8039 85.7336Z" fill="#12161C"/>
+                    <path class="number year n0 s2" d="M42.8668 85.1123V54.6707L48.4581 49.0794L54.0494 54.6707V85.1123L48.4581 90.7036L42.8668 85.1123Z" fill="#12161C"/>
+                    <path class="number year n0 s3" d="M42.8668 42.2455V11.8039L48.4581 6.2126L54.0494 11.8039V42.2455L48.4581 47.8369L42.8668 42.2455Z" fill="#12161C"/>
+                    <path class="number year n0 s4" d="M11.8039 0H42.2455L47.8368 5.59132L42.2455 11.1826H11.8039L6.21259 5.59132L11.8039 0Z" fill="#12161C"/>
+                    <path class="number year n0 s5" d="M0 42.2455L0 11.8039L5.59132 6.2126L11.1826 11.8039L11.1826 42.2455L5.59132 47.8369L0 42.2455Z" fill="#12161C"/>
+                    <path class="number year n0 s6" d="M11.8039 42.8668H42.2455L47.8368 48.4581L42.2455 54.0494H11.8039L6.21259 48.4581L11.8039 42.8668Z" fill="#12161C"/>
+                    <path class="number year n1 s0" d="M65.2321 85.1123V54.6707L70.8234 49.0794L76.4147 54.6707V85.1123L70.8234 90.7036L65.2321 85.1123Z" fill="#12161C"/>
+                    <path class="number year n1 s1" d="M77.0359 85.7336H107.478L113.069 91.3249L107.478 96.9162H77.0359L71.4446 91.3249L77.0359 85.7336Z" fill="#12161C"/>
+                    <path class="number year n1 s2" d="M108.099 85.1123V54.6707L113.69 49.0794L119.281 54.6707V85.1123L113.69 90.7036L108.099 85.1123Z" fill="#12161C"/>
+                    <path class="number year n1 s3" d="M108.099 42.2455V11.8039L113.69 6.2126L119.281 11.8039V42.2455L113.69 47.8369L108.099 42.2455Z" fill="#12161C"/>
+                    <path class="number year n1 s4" d="M77.0359 0H107.478L113.069 5.59132L107.478 11.1826H77.0359L71.4446 5.59132L77.0359 0Z" fill="#12161C"/>
+                    <path class="number year n1 s5" d="M65.2321 42.2455V11.8039L70.8234 6.2126L76.4147 11.8039V42.2455L70.8234 47.8369L65.2321 42.2455Z" fill="#12161C"/>
+                    <path class="number year n1 s6" d="M77.0359 42.8668H107.478L113.069 48.4581L107.478 54.0494H77.0359L71.4446 48.4581L77.0359 42.8668Z" fill="#12161C"/>
+                    <path class="number year n2 s0" d="M130 86.1123V55.6707L135.591 50.0794L141.183 55.6707V86.1123L135.591 91.7036L130 86.1123Z" fill="#12161C"/>
+                    <path class="number year n2 s1" d="M141.804 86.7336H172.245L177.837 92.3249L172.245 97.9162H141.804L136.213 92.3249L141.804 86.7336Z" fill="#12161C"/>
+                    <path class="number year n2 s2" d="M172.867 86.1123V55.6707L178.458 50.0794L184.049 55.6707V86.1123L178.458 91.7036L172.867 86.1123Z" fill="#12161C"/>
+                    <path class="number year n2 s3" d="M172.867 43.2455V12.8039L178.458 7.2126L184.049 12.8039V43.2455L178.458 48.8369L172.867 43.2455Z" fill="#12161C"/>
+                    <path class="number year n2 s4" d="M141.804 1H172.245L177.837 6.59132L172.245 12.1826H141.804L136.213 6.59132L141.804 1Z" fill="#12161C"/>
+                    <path class="number year n2 s5" d="M130 43.2455V12.8039L135.591 7.2126L141.183 12.8039V43.2455L135.591 48.8369L130 43.2455Z" fill="#12161C"/>
+                    <path class="number year n2 s6" d="M141.804 43.8668H172.245L177.837 49.4581L172.245 55.0494H141.804L136.213 49.4581L141.804 43.8668Z" fill="#12161C"/>
+                    <path class="number year n3 s0" d="M195.232 86.1123V55.6707L200.823 50.0794L206.415 55.6707V86.1123L200.823 91.7036L195.232 86.1123Z" fill="#12161C"/>
+                    <path class="number year n3 s1" d="M207.036 86.7336H237.478L243.069 92.3249L237.478 97.9162H207.036L201.445 92.3249L207.036 86.7336Z" fill="#12161C"/>
+                    <path class="number year n3 s2" d="M238.099 86.1123V55.6707L243.69 50.0794L249.281 55.6707V86.1123L243.69 91.7036L238.099 86.1123Z" fill="#12161C"/>
+                    <path class="number year n3 s3" d="M238.099 43.2455V12.8039L243.69 7.2126L249.281 12.8039V43.2455L243.69 48.8369L238.099 43.2455Z" fill="#12161C"/>
+                    <path class="number year n3 s4" d="M207.036 1H237.478L243.069 6.59132L237.478 12.1826H207.036L201.445 6.59132L207.036 1Z" fill="#12161C"/>
+                    <path class="number year n3 s5" d="M195.232 43.2455V12.8039L200.823 7.2126L206.415 12.8039V43.2455L200.823 48.8369L195.232 43.2455Z" fill="#12161C"/>
+                    <path class="number year n3 s6" d="M207.036 43.8668H237.478L243.069 49.4581L237.478 55.0494H207.036L201.445 49.4581L207.036 43.8668Z" fill="#12161C"/>
+                </svg>
+                <svg width="120" height="97" viewBox="0 0 120 97" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="number month n0 s0" d="M0 85.1123L0 54.6707L5.59132 49.0794L11.1826 54.6707L11.1826 85.1123L5.59132 90.7036L0 85.1123Z" fill="#12161C"/>
+                    <path class="number month n0 s1" d="M11.8039 85.7336H42.2455L47.8368 91.3249L42.2455 96.9162H11.8039L6.21259 91.3249L11.8039 85.7336Z" fill="#12161C"/>
+                    <path class="number month n0 s2" d="M42.8668 85.1123V54.6707L48.4581 49.0794L54.0494 54.6707V85.1123L48.4581 90.7036L42.8668 85.1123Z" fill="#12161C"/>
+                    <path class="number month n0 s3" d="M42.8668 42.2455V11.8039L48.4581 6.2126L54.0494 11.8039V42.2455L48.4581 47.8369L42.8668 42.2455Z" fill="#12161C"/>
+                    <path class="number month n0 s4" d="M11.8039 0H42.2455L47.8368 5.59132L42.2455 11.1826H11.8039L6.21259 5.59132L11.8039 0Z" fill="#12161C"/>
+                    <path class="number month n0 s5" d="M0 42.2455L0 11.8039L5.59132 6.2126L11.1826 11.8039L11.1826 42.2455L5.59132 47.8369L0 42.2455Z" fill="#12161C"/>
+                    <path class="number month n0 s6" d="M11.8039 42.8668H42.2455L47.8368 48.4581L42.2455 54.0494H11.8039L6.21259 48.4581L11.8039 42.8668Z" fill="#12161C"/>
+                    <path class="number month n1 s0" d="M65.2321 85.1123V54.6707L70.8234 49.0794L76.4147 54.6707V85.1123L70.8234 90.7036L65.2321 85.1123Z" fill="#12161C"/>
+                    <path class="number month n1 s1" d="M77.0359 85.7336H107.478L113.069 91.3249L107.478 96.9162H77.0359L71.4446 91.3249L77.0359 85.7336Z" fill="#12161C"/>
+                    <path class="number month n1 s2" d="M108.099 85.1123V54.6707L113.69 49.0794L119.281 54.6707V85.1123L113.69 90.7036L108.099 85.1123Z" fill="#12161C"/>
+                    <path class="number month n1 s3" d="M108.099 42.2455V11.8039L113.69 6.2126L119.281 11.8039V42.2455L113.69 47.8369L108.099 42.2455Z" fill="#12161C"/>
+                    <path class="number month n1 s4" d="M77.0359 0H107.478L113.069 5.59132L107.478 11.1826H77.0359L71.4446 5.59132L77.0359 0Z" fill="#12161C"/>
+                    <path class="number month n1 s5" d="M65.2321 42.2455V11.8039L70.8234 6.2126L76.4147 11.8039V42.2455L70.8234 47.8369L65.2321 42.2455Z" fill="#12161C"/>
+                    <path class="number month n1 s6" d="M77.0359 42.8668H107.478L113.069 48.4581L107.478 54.0494H77.0359L71.4446 48.4581L77.0359 42.8668Z" fill="#12161C"/>
+                </svg>
+                <svg width="120" height="97" viewBox="0 0 120 97" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="number day n0 s0" d="M0 85.1123L0 54.6707L5.59132 49.0794L11.1826 54.6707L11.1826 85.1123L5.59132 90.7036L0 85.1123Z" fill="#12161C"/>
+                    <path class="number day n0 s1" d="M11.8039 85.7336H42.2455L47.8368 91.3249L42.2455 96.9162H11.8039L6.21259 91.3249L11.8039 85.7336Z" fill="#12161C"/>
+                    <path class="number day n0 s2" d="M42.8668 85.1123V54.6707L48.4581 49.0794L54.0494 54.6707V85.1123L48.4581 90.7036L42.8668 85.1123Z" fill="#12161C"/>
+                    <path class="number day n0 s3" d="M42.8668 42.2455V11.8039L48.4581 6.2126L54.0494 11.8039V42.2455L48.4581 47.8369L42.8668 42.2455Z" fill="#12161C"/>
+                    <path class="number day n0 s4" d="M11.8039 0H42.2455L47.8368 5.59132L42.2455 11.1826H11.8039L6.21259 5.59132L11.8039 0Z" fill="#12161C"/>
+                    <path class="number day n0 s5" d="M0 42.2455L0 11.8039L5.59132 6.2126L11.1826 11.8039L11.1826 42.2455L5.59132 47.8369L0 42.2455Z" fill="#12161C"/>
+                    <path class="number day n0 s6" d="M11.8039 42.8668H42.2455L47.8368 48.4581L42.2455 54.0494H11.8039L6.21259 48.4581L11.8039 42.8668Z" fill="#12161C"/>
+                    <path class="number day n1 s0" d="M65.2321 85.1123V54.6707L70.8234 49.0794L76.4147 54.6707V85.1123L70.8234 90.7036L65.2321 85.1123Z" fill="#12161C"/>
+                    <path class="number day n1 s1" d="M77.0359 85.7336H107.478L113.069 91.3249L107.478 96.9162H77.0359L71.4446 91.3249L77.0359 85.7336Z" fill="#12161C"/>
+                    <path class="number day n1 s2" d="M108.099 85.1123V54.6707L113.69 49.0794L119.281 54.6707V85.1123L113.69 90.7036L108.099 85.1123Z" fill="#12161C"/>
+                    <path class="number day n1 s3" d="M108.099 42.2455V11.8039L113.69 6.2126L119.281 11.8039V42.2455L113.69 47.8369L108.099 42.2455Z" fill="#12161C"/>
+                    <path class="number day n1 s4" d="M77.0359 0H107.478L113.069 5.59132L107.478 11.1826H77.0359L71.4446 5.59132L77.0359 0Z" fill="#12161C"/>
+                    <path class="number day n1 s5" d="M65.2321 42.2455V11.8039L70.8234 6.2126L76.4147 11.8039V42.2455L70.8234 47.8369L65.2321 42.2455Z" fill="#12161C"/>
+                    <path class="number day n1 s6" d="M77.0359 42.8668H107.478L113.069 48.4581L107.478 54.0494H77.0359L71.4446 48.4581L77.0359 42.8668Z" fill="#12161C"/>
+                </svg>
+            </div>
+            <svg class="clock" width="881" height="208" viewBox="0 0 881 208" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path class="number hour n0 s0"
+                  d="M0 180.684L0 116.06L11.8698 104.19L23.7395 116.06L23.7395 180.684L11.8698 192.554L0 180.684Z"
+                  fill="#12161C"/>
+            <path class="number hour n0 s1"
+                  d="M25.0584 182.003H89.6827L101.552 193.873L89.6827 205.743H25.0584L13.1887 193.873L25.0584 182.003Z"
+                  fill="#12161C"/>
+            <path class="number hour n0 s2"
+                  d="M91.0015 180.684V116.06L102.871 104.19L114.741 116.06V180.684L102.871 192.554L91.0015 180.684Z"
+                  fill="#12161C"/>
+            <path class="number hour n0 s3"
+                  d="M91.0015 89.6826V25.0584L102.871 13.1886L114.741 25.0584V89.6826L102.871 101.552L91.0015 89.6826Z"
+                  fill="#12161C"/>
+            <path class="number hour n0 s4"
+                  d="M25.0584 0H89.6827L101.552 11.8698L89.6827 23.7395H25.0584L13.1887 11.8698L25.0584 0Z"
+                  fill="#12161C"/>
+            <path class="number hour n0 s5"
+                  d="M0 89.6826L0 25.0584L11.8698 13.1886L23.7395 25.0584L23.7395 89.6826L11.8698 101.552L0 89.6826Z"
+                  fill="#12161C"/>
+            <path class="number hour n0 s6"
+                  d="M25.0584 91.0015H89.6827L101.552 102.871L89.6827 114.741H25.0584L13.1887 102.871L25.0584 91.0015Z"
+                  fill="#12161C"/>
+            <path class="number hour n1 s0"
+                  d="M138.481 180.684V116.06L150.35 104.19L162.22 116.06V180.684L150.35 192.554L138.481 180.684Z"
+                  fill="#12161C"/>
+            <path class="number hour n1 s1"
+                  d="M163.539 182.003H228.163L240.033 193.873L228.163 205.743H163.539L151.669 193.873L163.539 182.003Z"
+                  fill="#12161C"/>
+            <path class="number hour n1 s2"
+                  d="M229.482 180.684V116.06L241.352 104.19L253.222 116.06V180.684L241.352 192.554L229.482 180.684Z"
+                  fill="#12161C"/>
+            <path class="number hour n1 s3"
+                  d="M229.482 89.6826V25.0584L241.352 13.1886L253.222 25.0584V89.6826L241.352 101.552L229.482 89.6826Z"
+                  fill="#12161C"/>
+            <path class="number hour n1 s4"
+                  d="M163.539 0H228.163L240.033 11.8698L228.163 23.7395H163.539L151.669 11.8698L163.539 0Z"
+                  fill="#12161C"/>
+            <path class="number hour n1 s5"
+                  d="M138.481 89.6826V25.0584L150.35 13.1886L162.22 25.0584V89.6826L150.35 101.552L138.481 89.6826Z"
+                  fill="#12161C"/>
+            <path class="number hour n1 s6"
+                  d="M163.539 91.0015H228.163L240.033 102.871L228.163 114.741H163.539L151.669 102.871L163.539 91.0015Z"
+                  fill="#12161C"/>
+            <circle class="dot" cx="283.555" cy="80.4506" r="11.8698" fill="#12161C"/>
+            <circle class="dot" cx="283.555" cy="127.93" r="11.8698" fill="#12161C"/>
+            <path class="number min n0 s0"
+                  d="M313.889 180.684V116.06L325.759 104.19L337.629 116.06V180.684L325.759 192.554L313.889 180.684Z"
+                  fill="#12161C"/>
+            <path class="number min n0 s1"
+                  d="M338.948 182.003H403.572L415.442 193.873L403.572 205.743H338.948L327.078 193.873L338.948 182.003Z"
+                  fill="#12161C"/>
+            <path class="number min n0 s2"
+                  d="M404.891 180.684V116.06L416.76 104.19L428.63 116.06V180.684L416.76 192.554L404.891 180.684Z"
+                  fill="#12161C"/>
+            <path class="number min n0 s3"
+                  d="M404.891 89.6826V25.0584L416.76 13.1886L428.63 25.0584V89.6826L416.76 101.552L404.891 89.6826Z"
+                  fill="#12161C"/>
+            <path class="number min n0 s4"
+                  d="M338.948 0H403.572L415.442 11.8698L403.572 23.7395H338.948L327.078 11.8698L338.948 0Z"
+                  fill="#12161C"/>
+            <path class="number min n0 s5"
+                  d="M313.889 89.6826V25.0584L325.759 13.1886L337.629 25.0584V89.6826L325.759 101.552L313.889 89.6826Z"
+                  fill="#12161C"/>
+            <path class="number min n0 s6"
+                  d="M338.948 91.0015H403.572L415.442 102.871L403.572 114.741H338.948L327.078 102.871L338.948 91.0015Z"
+                  fill="#12161C"/>
+            <path class="number min n1 s0"
+                  d="M452.37 180.684V116.06L464.24 104.19L476.109 116.06V180.684L464.24 192.554L452.37 180.684Z"
+                  fill="#12161C"/>
+            <path class="number min n1 s1"
+                  d="M477.428 182.003H542.052L553.922 193.873L542.052 205.743H477.428L465.558 193.873L477.428 182.003Z"
+                  fill="#12161C"/>
+            <path class="number min n1 s2"
+                  d="M543.371 180.684V116.06L555.241 104.19L567.111 116.06V180.684L555.241 192.554L543.371 180.684Z"
+                  fill="#12161C"/>
+            <path class="number min n1 s3"
+                  d="M543.371 89.6826V25.0584L555.241 13.1886L567.111 25.0584V89.6826L555.241 101.552L543.371 89.6826Z"
+                  fill="#12161C"/>
+            <path class="number min n1 s4"
+                  d="M477.428 0H542.052L553.922 11.8698L542.052 23.7395H477.428L465.558 11.8698L477.428 0Z"
+                  fill="#12161C"/>
+            <path class="number min n1 s5"
+                  d="M452.37 89.6826V25.0584L464.24 13.1886L476.109 25.0584V89.6826L464.24 101.552L452.37 89.6826Z"
+                  fill="#12161C"/>
+            <path class="number min n1 s6"
+                  d="M477.428 91.0015H542.052L553.922 102.871L542.052 114.741H477.428L465.558 102.871L477.428 91.0015Z"
+                  fill="#12161C"/>
+            <circle class="dot" cx="597.445" cy="80.4506" r="11.8698" fill="#12161C"/>
+            <circle class="dot" cx="597.445" cy="127.93" r="11.8698" fill="#12161C"/>
+            <path class="number sec n0 s0"
+                  d="M627.778 182.003V117.379L639.648 105.509L651.518 117.379V182.003L639.648 193.873L627.778 182.003Z"
+                  fill="#12161C"/>
+            <path class="number sec n0 s1"
+                  d="M652.837 183.322H717.461L729.331 195.192L717.461 207.061H652.837L640.967 195.192L652.837 183.322Z"
+                  fill="#12161C"/>
+            <path class="number sec n0 s2"
+                  d="M718.78 182.003V117.379L730.65 105.509L742.519 117.379V182.003L730.65 193.873L718.78 182.003Z"
+                  fill="#12161C"/>
+            <path class="number sec n0 s3"
+                  d="M718.78 91.0015V26.3772L730.65 14.5074L742.519 26.3772V91.0015L730.65 102.871L718.78 91.0015Z"
+                  fill="#12161C"/>
+            <path class="number sec n0 s4"
+                  d="M652.837 1.31879H717.461L729.331 13.1885L717.461 25.0583H652.837L640.967 13.1885L652.837 1.31879Z"
+                  fill="#12161C"/>
+            <path class="number sec n0 s5"
+                  d="M627.778 91.0015V26.3772L639.648 14.5074L651.518 26.3772V91.0015L639.648 102.871L627.778 91.0015Z"
+                  fill="#12161C"/>
+            <path class="number sec n0 s6"
+                  d="M652.837 92.3203H717.461L729.331 104.19L717.461 116.06H652.837L640.967 104.19L652.837 92.3203Z"
+                  fill="#12161C"/>
+            <path class="number sec n1 s0"
+                  d="M766.259 182.003V117.379L778.129 105.509L789.998 117.379V182.003L778.129 193.873L766.259 182.003Z"
+                  fill="#12161C"/>
+            <path class="number sec n1 s1"
+                  d="M791.317 183.322H855.942L867.811 195.192L855.942 207.061H791.317L779.448 195.192L791.317 183.322Z"
+                  fill="#12161C"/>
+            <path class="number sec n1 s2"
+                  d="M857.26 182.003V117.379L869.13 105.509L881 117.379V182.003L869.13 193.873L857.26 182.003Z"
+                  fill="#12161C"/>
+            <path class="number sec n1 s3"
+                  d="M857.26 91.0015V26.3772L869.13 14.5074L881 26.3772V91.0015L869.13 102.871L857.26 91.0015Z"
+                  fill="#12161C"/>
+            <path class="number sec n1 s4"
+                  d="M791.317 1.31879H855.942L867.811 13.1885L855.942 25.0583H791.317L779.448 13.1885L791.317 1.31879Z"
+                  fill="#12161C"/>
+            <path class="number sec n1 s5"
+                  d="M766.259 91.0015V26.3772L778.129 14.5074L789.998 26.3772V91.0015L778.129 102.871L766.259 91.0015Z"
+                  fill="#12161C"/>
+            <path class="number sec n1 s6"
+                  d="M791.317 92.3203H855.942L867.811 104.19L855.942 116.06H791.317L779.448 104.19L791.317 92.3203Z"
+                  fill="#12161C"/>
+        </svg>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+
+        </div>
+    </footer>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>

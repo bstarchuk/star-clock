@@ -15,6 +15,48 @@ const NUMBER_KEYS = {
     9: [0, 1, 1, 1, 1, 1, 1],
 };
 
+const UTC_VALUES = [
+    "UTC-12",
+    "UTC-11",
+    "UTC-10",
+    "UTC-9:30",
+    "UTC-9",
+    "UTC-8",
+    "UTC-7",
+    "UTC-6",
+    "UTC-5",
+    "UTC-4",
+    "UTC-3:30",
+    "UTC-3",
+    "UTC-2",
+    "UTC-1",
+    "UTC+0",
+    "UTC+1",
+    "UTC+2",
+    "UTC+3",
+    "UTC+3:30",
+    "UTC+4",
+    "UTC+4:30",
+    "UTC+5",
+    "UTC+5:30",
+    "UTC+5:45",
+    "UTC+6",
+    "UTC+6:30",
+    "UTC+7",
+    "UTC+8",
+    "UTC+8:45",
+    "UTC+9",
+    "UTC+9:30",
+    "UTC+10",
+    "UTC+10:30",
+    "UTC+11",
+    "UTC+11:30",
+    "UTC+12",
+    "UTC+12:45",
+    "UTC+13",
+    "UTC+14"
+]
+
 const utcDif = -new Date().getTimezoneOffset();
 
 let interval = startClock(utcDif * 60000);
@@ -46,6 +88,8 @@ changeLocalizationBtn.addEventListener('click', () => {
         modalWindow.style.display = 'none';
     }
 });
+
+addEventListener("load", setUTC);
 
 function startClock(utc) {
     return setInterval(() => {
@@ -81,4 +125,10 @@ function clearNums(className) {
     sections.forEach((elem) => {
         elem.setAttribute("fill", "#12161C");
     })
+}
+
+function setUTC() {
+    UTC_VALUES.forEach(elem => {
+        localizationList.innerHTML += `<option value="${elem.slice(3)}">${elem}</option>`;
+    });
 }
